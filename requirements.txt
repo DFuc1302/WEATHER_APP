@@ -1,5 +1,6 @@
 Flask
-tensorflow==2.20.0
+tensorflow
 Werkzeug
 numpy
 gunicorn
+
