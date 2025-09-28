@@ -1,4 +1,5 @@
-Flask==2.2.5
-tensorflow
-Werkzeug==2.2.3
+Flask
+tensorflow==2.20.0
+Werkzeug
 numpy
+gunicorn
