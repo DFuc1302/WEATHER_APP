@@ -9,7 +9,7 @@ UPLOAD_FOLDER = 'static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load model
-model = load_model(r"D:\\Weather AI\\project 2\\best_weather_model.h5")
+model = load_model("best_weather_model.h5")
 classes = ["Cloudy", "Rainy", "Sunny"]
 
 @app.route("/", methods=["GET", "POST"])
@@ -37,4 +37,5 @@ def index():
     return render_template("index.html", pred_label=pred_label, pred_probs=pred_probs, img_path=img_path)
 
 if __name__ == "__main__":
+
     app.run(debug=True)
