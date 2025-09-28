@@ -37,5 +37,7 @@ def index():
     return render_template("index.html", pred_label=pred_label, pred_probs=pred_probs, img_path=img_path)
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Lấy PORT từ Render, mặc định 5000 khi chạy local
+    app.run(host="0.0.0.0", port=port)
 
-    app.run(debug=True)
+
