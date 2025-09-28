@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather-from-Sky - Dự báo nắng/mây/mưa từ ảnh</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather-from-Sky</h1>
+    <p>Tải ảnh bầu trời hoặc chụp trực tiếp bằng camera → nhận dự báo Nắng / Mây / Mưa + khuyến nghị.</p>
+
+    <div class="panel">
+      <h2>1) Chọn ảnh / Upload</h2>
+      <input type="file" id="fileInput" accept="image/*" />
+      <button id="uploadBtn">Upload & Dự báo</button>
+    </div>
+
+    <div class="panel">
+      <h2>2) Hoặc chụp từ camera</h2>
+      <video id="video" width="320" height="240" autoplay></video>
+      <br/>
+      <button id="snapBtn">Chụp & Dự báo</button>
+      <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+    </div>
+
+    <div class="panel">
+      <h2>Ảnh đã chọn</h2>
+      <img id="preview" src="" alt="preview" style="max-width:400px; display:none;" />
+    </div>
+
+    <div class="panel" id="resultPanel" style="display:none;">
+      <h2>Kết quả dự báo</h2>
+      <p><strong>Nhãn dự đoán:</strong> <span id="predLabel"></span></p>
+      <div id="probList"></div>
+      <h3>Khuyến nghị</h3>
+      <ul id="recs"></ul>
+    </div>
+
+    <div id="msg"></div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
